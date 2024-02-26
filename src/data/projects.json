@@ -1,0 +1,23 @@
+[
+    {
+      "title": "To-Do List",
+      "imageSrc": "projects/project.png",
+      "description": "Using Python and the Tkinter library, this application allows users to efficiently manage their tasks, providing a seamless and interactive experience for organizing daily activities with ease.",
+      "skills": ["Python", "Tkinter"],
+      "source": "https://www.github.com/abilanravi/to-do-list"
+    },
+    {
+      "title": "Weather App",
+      "imageSrc": "projects/project.png",
+      "description": "The user-friendly interface allows for interactive exploration of current conditions and forecasts, offering an engaging and informative experience using an API.",
+      "skills": ["JavaScript", "HTML", "CSS", "API"],
+      "source": "https://www.github.com/abilanravi/Weather-app"
+    },
+    {
+      "title": "MenuMaster",
+      "imageSrc": "projects/project.png",
+      "description": "A program that dynamically manipulates collections, featuring a user-friendly menu to explore restaurant data, including reservations and patrons.",
+      "skills": ["C", "Dynamic Memory"],
+      "source": "https://www.github.com/abilanravi/MenuMaster"
+    }
+  ]

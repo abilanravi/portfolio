@@ -1,0 +1,29 @@
+[
+    {
+      "role": "Student",
+      "organisation": "Carleton University",
+      "startDate": "Sept, 2022",
+      "endDate": "Present",
+      "experiences": ["Learned various languages", "Worked on projects"],
+      "imageSrc": "history/carleton.png"
+    },
+    {
+      "role": "Student",
+      "organisation": "Udemy",
+      "startDate": "Jan, 2024",
+      "endDate": "Present",
+      "experiences": ["Studying Azure Fundamentals", "Preparing for AZ-900"],
+      "imageSrc": "history/udemy.png"
+    },
+    {
+      "role": "Freelance Developer",
+      "organisation": "Various",
+      "startDate": "Apr, 2022",
+      "endDate": "Present",
+      "experiences": [
+        "Worked various miscellanesous projects",
+        "Helped many users with their projects"
+      ],
+      "imageSrc": "history/coder.png"
+    }
+  ]
