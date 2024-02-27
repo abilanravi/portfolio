@@ -74,6 +74,10 @@
   padding: 24px;
 }
 
+.historyItem:hover {
+  transform: scale(1.1);
+}
+
 .historyItem img {
   width: 50px;
 }
