@@ -17,7 +17,7 @@
       "title": "MenuMaster",
       "imageSrc": "projects/project.png",
       "description": "A program that dynamically manipulates collections, featuring a user-friendly menu to explore restaurant data, including reservations and patrons.",
-      "skills": ["C", "Dynamic Memory"],
+      "skills": ["C", "Linux", "Dynamic Memory"],
       "source": "https://www.github.com/abilanravi/MenuMaster"
     }
   ]
