@@ -17,21 +17,20 @@ export const About = () => {
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
             <div className={styles.aboutItemText}>
-              <h3>Frontend Developer</h3>
+              <h3>Full-Stack Developer</h3>
               <p>
-              I am adept and proficient in crafting seamless 
-              and visually appealing 
-              user experiences for web applications.              
+              I specialize in building complete web applications by crafting seamless and visually appealing user interfaces 
+              while developing efficient and optimized server-side systems with integrated APIs.            
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
             <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
+              <h3>Cybersecurity Specialist</h3>
               <p>
-                I have experience developing fast and optimised back-end systems
-                and using APIs
+                I am adept at analyzing and implementing encryption algorithms, securing sensitive data, 
+                and ensuring robust application security against potential threats.
               </p>
             </div>
           </li>
