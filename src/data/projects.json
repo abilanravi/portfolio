@@ -1,10 +1,10 @@
 [
     {
-      "title": "To-Do List",
+      "title": "SecureChat",
       "imageSrc": "projects/project.png",
-      "description": "Using Python and the Tkinter library, this application allows users to efficiently manage their tasks, providing a seamless and interactive experience for organizing daily activities with ease.",
-      "skills": ["Python", "Tkinter"],
-      "source": "https://www.github.com/abilanravi/to-do-list"
+      "description": "SecureChat is a command-line app for secure, encrypted messaging using RSA and bcrypt, with persistent JSON-based storage.",
+      "skills": ["Python", "Cryptography", "Bcrypt", "Socket.IO"],
+      "source": "https://www.github.com/abilanravi/SecureChat"
     },
     {
       "title": "Weather App",
