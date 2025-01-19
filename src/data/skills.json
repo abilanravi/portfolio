@@ -7,6 +7,10 @@
       "title": "Java",
       "imageSrc": "skills/java.png"
     },
+        {
+      "title": "Deno",
+      "imageSrc": "skills/deno.png"
+    },
     {
       "title": "JavaScript",
       "imageSrc": "skills/javascript.png"
@@ -34,5 +38,9 @@
     {
       "title": "C++",
       "imageSrc": "skills/c++.png"
+    }
+        {
+      "title": "SQL",
+      "imageSrc": "skills/sql.png"
     }
   ]
