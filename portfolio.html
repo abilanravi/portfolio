@@ -184,22 +184,6 @@
   .navlinks a::before{ content: '/'; color: var(--line); margin-right: 4px; }
   .navlinks a:hover{ color: var(--accent-dark); }
 
-  .theme-toggle{
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    background: transparent;
-    border: 1px solid var(--line);
-    color: var(--ink-soft);
-    padding: 8px 14px;
-    border-radius: 999px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: border-color 0.2s ease, color 0.2s ease;
-  }
-  .theme-toggle:hover{ border-color: var(--accent); color: var(--accent-dark); }
-
   /* ---------- hero / terminal ---------- */
   .hero{
     padding: 72px 0 96px;
@@ -555,7 +539,6 @@
         <li><a href="#experience">experience</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle dark mode">🌙 dark</button>
     </div>
   </nav>
 </header>
@@ -588,7 +571,7 @@
           <input id="termInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command input" placeholder="type a command…">
         </div>
       </div>
-      <div class="hint wrap" style="padding: 0 20px 16px;">try <code>help</code>, <code>skills</code>, <code>theme</code>, <code>sudo hire-me</code></div>
+      <div class="hint wrap" style="padding: 0 20px 16px;">try <code>help</code>, <code>skills</code>, <code>light</code> / <code>dark</code>, <code>sudo hire-me</code></div>
     </div>
   </div>
 </section>
@@ -670,22 +653,25 @@
     <h2 class="decrypt">Things I've built and broken</h2>
     <div class="case-grid">
       <div class="case">
-        <div class="case-meta"><span>CASE_ID: PRJ-01</span><span class="status">RESOLVED</span></div>
-        <h3>SecureChat — Encrypted Chatline</h3>
-        <p>An end-to-end encrypted messaging system using AES for message encryption and RSA for secure key exchange, with Bcrypt password hashing and JSON-based encrypted message storage.</p>
-        <div class="stack"><span>Python</span><span>Cryptography</span><span>Bcrypt</span></div>
+        <div class="case-meta"><span>CASE_ID: PRJ-01</span><span class="status">SHIPPED</span></div>
+        <h3>SetPiece — Real-Time Football Debate Platform</h3>
+        <p>A real-time debate platform supporting 100+ concurrent users through synchronized video rooms, WebSocket-based live comments, and an ELO ranking system on a scalable backend.</p>
+        <div class="stack"><span>Python</span><span>Socket.IO</span><span>Next.js</span><span>Supabase</span><span>LiveKit</span><span>Redis</span></div>
+        <a class="btn ghost" style="margin-top:16px; font-size:0.75rem; padding:8px 14px;" href="https://github.com/GajapriyanV/SetPiece" target="_blank" rel="noopener">⌥ view repo</a>
       </div>
       <div class="case">
         <div class="case-meta"><span>CASE_ID: PRJ-02</span><span class="status">RESOLVED</span></div>
         <h3>Log Analyzer — AI-Assisted Log Parser</h3>
         <p>A SOC automation tool that parses Linux SSH authentication logs to detect brute-force attacks, suspicious logins, and user enumeration, with configurable detection rules and automated threat reports.</p>
         <div class="stack"><span>Python</span><span>Regex</span><span>SOC Automation</span></div>
+        <a class="btn ghost" style="margin-top:16px; font-size:0.75rem; padding:8px 14px;" href="https://github.com/abilanravi/LogAnalyzer" target="_blank" rel="noopener">⌥ view repo</a>
       </div>
       <div class="case">
-        <div class="case-meta"><span>CASE_ID: PRJ-03</span><span class="status">SHIPPED</span></div>
-        <h3>SetPiece — Real-Time Football Debate Platform</h3>
-        <p>A real-time debate platform supporting 100+ concurrent users through synchronized video rooms, WebSocket-based live comments, and an ELO ranking system on a scalable backend.</p>
-        <div class="stack"><span>Python</span><span>Socket.IO</span><span>Next.js</span><span>Supabase</span><span>LiveKit</span><span>Redis</span></div>
+        <div class="case-meta"><span>CASE_ID: PRJ-03</span><span class="status">RESOLVED</span></div>
+        <h3>SecureChat — Encrypted Chatline</h3>
+        <p>An end-to-end encrypted messaging system using AES for message encryption and RSA for secure key exchange, with Bcrypt password hashing and JSON-based encrypted message storage.</p>
+        <div class="stack"><span>Python</span><span>Cryptography</span><span>Bcrypt</span></div>
+        <a class="btn ghost" style="margin-top:16px; font-size:0.75rem; padding:8px 14px;" href="https://github.com/abilanravi/SecureChat" target="_blank" rel="noopener">⌥ view repo</a>
       </div>
     </div>
   </div>
@@ -736,9 +722,8 @@
       <div style="color:#a9c9bf; margin-top:6px;">Reaching out about an internship? I'd genuinely love to hear from you.</div>
       <div class="contact-links">
         <a href="mailto:abilanravi@gmail.com">✉ email</a>
-        <a href="#" data-placeholder="linkedin">in linkedin</a>
-        <a href="#" data-placeholder="github">⌥ github</a>
-        <a href="#" data-placeholder="website">🌐 website</a>
+        <a href="https://www.linkedin.com/in/abilanravi/" target="_blank" rel="noopener">in linkedin</a>
+        <a href="https://github.com/abilanravi" target="_blank" rel="noopener">⌥ github</a>
       </div>
     </div>
   </div>
@@ -749,20 +734,13 @@
 </footer>
 
 <script>
-  // ---------- theme toggle ----------
+  // ---------- theme (terminal-controlled) ----------
   const root = document.documentElement;
-  const themeToggle = document.getElementById('themeToggle');
 
   function setTheme(mode){
     root.setAttribute('data-theme', mode);
-    themeToggle.textContent = mode === 'dark' ? '☀ light' : '🌙 dark';
-    themeToggle.setAttribute('aria-pressed', mode === 'dark');
   }
-  setTheme('light');
-  themeToggle.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    setTheme(current);
-  });
+  setTheme('dark');
 
   // ---------- terminal logic ----------
   const termBody = document.getElementById('termBody');
@@ -797,7 +775,7 @@
       printLine('  projects      — jump to case files', 'out');
       printLine('  experience    — jump to work history', 'out');
       printLine('  contact       — jump to contact info', 'out');
-      printLine('  theme         — toggle light/dark mode', 'out');
+      printLine('  light / dark — switch color mode', 'out');
       printLine('  clear         — clear the terminal', 'out');
       printLine('  sudo hire-me  — ???', 'out');
     },
@@ -809,10 +787,21 @@
     projects(){ printLine('Opening case files…', 'out'); scrollToId('projects'); },
     experience(){ printLine('Loading work history…', 'out'); scrollToId('experience'); },
     contact(){ printLine('Opening contact channel…', 'out'); scrollToId('contact'); },
-    theme(){
-      const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      setTheme(current);
-      printLine(`Switched to ${current} mode.`, 'out');
+    light(){
+      if(root.getAttribute('data-theme') === 'light'){
+        printLine('Already in light mode.', 'out');
+      } else {
+        setTheme('light');
+        printLine('Switched to light mode.', 'out');
+      }
+    },
+    dark(){
+      if(root.getAttribute('data-theme') === 'dark'){
+        printLine('Already in dark mode.', 'out');
+      } else {
+        setTheme('dark');
+        printLine('Switched to dark mode.', 'out');
+      }
     },
     clear(){ termBody.innerHTML = ''; },
     'sudo hire-me'(){
@@ -878,14 +867,6 @@
     }, { threshold: 0.6 });
     targets.forEach(t => io.observe(t));
   }
-
-  // placeholder link notice
-  document.querySelectorAll('a[data-placeholder]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Add your ' + link.dataset.placeholder + ' URL here.');
-    });
-  });
 </script>
 
 </body>
