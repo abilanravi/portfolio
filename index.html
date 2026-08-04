@@ -551,7 +551,7 @@
     <div>
       <div class="eyebrow">Status: Open to Security Engineering Roles</div>
       <h1>Finding the bugs before <span class="cursor-underline">the attackers do.</span></h1>
-      <p class="lead">I'm Abilan Ravindran, a Cybersecurity Specialization student at Carleton University with two internships at Honeywell under my belt. This site doubles as a terminal so you should try typing a command.</p>
+      <p class="lead">I'm Abilan Ravindran, a Cybersecurity Specialization student at Carleton University with two internships at Honeywell under my belt. This site doubles as a terminal — try typing a command.</p>
       <div class="hero-cta">
         <a class="btn primary" href="#projects">View case files</a>
         <a class="btn ghost" href="#contact">Get in touch</a>
@@ -671,10 +671,10 @@
       </div>
       <div class="case">
         <div class="case-meta"><span>CASE_ID: PRJ-03</span><span class="status">RESOLVED</span></div>
-        <h3>SecureChat — Encrypted Chatline</h3>
-        <p>An end-to-end encrypted messaging system using AES for message encryption and RSA for secure key exchange, with Bcrypt password hashing and JSON-based encrypted message storage.</p>
-        <div class="stack"><span>Python</span><span>Cryptography</span><span>Bcrypt</span></div>
-        <a class="btn ghost" style="margin-top:16px; font-size:0.75rem; padding:8px 14px;" href="https://github.com/abilanravi/SecureChat" target="_blank" rel="noopener">⌥ view repo</a>
+        <h3>VulnGraph — Vulnerability Intelligence Platform</h3>
+        <p>A vulnerability intelligence platform integrating SAST and SCA tooling to automate security analysis across software repositories. FastAPI services and PostgreSQL pipelines ingest, normalize, and track CVEs, dependency vulnerabilities, and remediation status, with configurable detection workflows built on Semgrep and OSV Scanner.</p>
+        <div class="stack"><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>Semgrep</span><span>OSV Scanner</span></div>
+        <a class="btn ghost" style="margin-top:16px; font-size:0.75rem; padding:8px 14px;" href="https://github.com/abilanravi/SVIP" target="_blank" rel="noopener">⌥ view repo</a>
       </div>
     </div>
   </div>
@@ -870,6 +870,14 @@
     }, { threshold: 0.6 });
     targets.forEach(t => io.observe(t));
   }
+
+  // placeholder link notice
+  document.querySelectorAll('a[data-placeholder]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Add your ' + link.dataset.placeholder + ' URL here.');
+    });
+  });
 </script>
 
 </body>
